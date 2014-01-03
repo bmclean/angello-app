@@ -6,7 +6,6 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="javascripts/vendor/angular.js"></script>
   <script src="javascripts/app.js"></script>
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -46,11 +45,32 @@
             </textarea>
           </div>
         </div>
+        <div class="control-group">
+          <label class="control-label" for="inputAcceptance">Acceptance Criteria</label>
+          <div class="controls">
+            <textarea id="inputAcceptance" placeholder="Acceptance Criteria" rows="3" ng-model="currentStory.criteria">
+            </textarea>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputReporter">Reporter</label>
+          <div class="controls">
+            <textarea id="inputReporter" placeholder="Reporter" rows="3" ng-model="currentStory.reporter">
+            </textarea>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputAssignee">Assignee</label>
+          <div class="controls">
+            <textarea id="inputAssignee" placeholder="Assignee" rows="3" ng-model="currentStory.assignee">
+            </textarea>
+          </div>
+        </div>
+
+
       </form>
     </div>
 
   </div>
-
-
 </body>
 </html>
