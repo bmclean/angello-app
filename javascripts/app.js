@@ -60,14 +60,17 @@ myModule.factory('angelloModel', function() {
   };
 });
 
+// instantiate the main controller
 myModule.controller('MainCtrl', function($scope, angelloModel, angelloHelper) {
   $scope.currentStory;
 
-  $scope.types = angelloModel.getTypes();
-  $scope.statuses = angelloModel.getStatuses();
   $scope.stories = angelloModel.getStories();
+  $scope.statuses = angelloModel.getStatuses();
+  $scope.types = angelloModel.getTypes();
+
   $scope.statusesIndex = angelloHelper.buildIndex($scope.statuses, 'name');
   $scope.typesIndex = angelloHelper.buildIndex($scope.types, 'name');
+
 
   $scope.setCurrentStory = function(story) {
     $scope.currentStory = story;
